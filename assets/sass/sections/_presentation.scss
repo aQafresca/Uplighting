@@ -1,0 +1,15 @@
+.presentation {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    &__box {
+        width: 200px;
+        height: 300px;
+        margin-top: -60px;
+        background-color: #797979;
+        border: 1px solid #262626;
+        border-radius: 10px;
+        box-shadow: 4px 4px 32px 1px rgba(34, 60, 80, 0.5);
+        cursor: pointer;
+    }
+}
