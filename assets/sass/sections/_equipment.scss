@@ -1,0 +1,90 @@
+%cards__content {
+    transition: all .5s ease-in-out;
+    transform: translate3d(0px, 0px, 20px);
+    &:hover {
+        transform: translate3d(0px, 0px, 50px);
+    }
+}
+
+.equipment {
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 2rem;
+        row-gap: 80px;
+        padding: 100px 0;
+    }
+    // flex-wrap: wrap;
+    &__parent {
+        height: 400px;
+        width: 300px;
+        flex-grow: 1;
+        display: flex;
+        place-self: center;
+        perspective: 1000px;
+    }
+    &__card {
+        border-radius: 10px;
+        padding-top: 100px;
+        transform-style: preserve-3d;
+        background-image: url(./../img/main_img/equipment/background-card.jpg);
+        background-position: center;
+        transition: all .5s ease-in-out;
+        &:hover {
+            background-position: 80% 20%;
+            transform: rotate3d(0.5, 1, 0, 30deg);
+        }
+        &-title {
+            color: rgb(255, 255, 255);
+            font-weight: 900;
+            @extend %cards__content;
+        }
+        &-class {
+            color: rgb(219, 219, 219);
+            font-weight: 400;
+            @extend %cards__content;
+        }
+        &-description {
+            color: rgb(185, 185, 185);
+            font-size: 1.5rem;
+            font-weight: 400;
+            @extend %cards__content;
+        }
+    }
+    & .card__wash {
+        background-image: url(./../img/main_img/equipment/background-red.jpg);
+        &:hover {
+            transform: rotate3d(0.5, -1, 0, 30deg);
+        }
+    }
+    & .card__small-par {
+        background-image: url(./../img/main_img/equipment/background-grass.jpg);
+    }
+    & .card__medium-par {
+        background-image: url(./../img/main_img/equipment/background-heaven.jpg);
+        &:hover {
+            transform: rotate3d(0.5, -1, 0, 30deg);
+        }
+    }
+    &__content {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 0 0 10px 10px;
+        box-shadow: rgba(248, 101, 3, 0.986) 0px 20px 50px -15px;
+        transition: all .5s ease-in-out;
+        padding: 10px  5px;
+        transform-style: preserve-3d;
+    }
+    & .content__wash {
+        box-shadow: rgba(243, 5, 5, 0.9) 0px 20px 50px -15px;
+    }
+    & .content__small-par {
+        box-shadow: rgba(96, 245, 10, 0.9) 0px 20px 50px -15px;
+    }
+    & .content__medium-par {
+        box-shadow: rgba(3, 60, 248, 0.9) 0px 20px 50px -15px;
+    }
+
+}
+

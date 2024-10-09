@@ -73,6 +73,7 @@ body {
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
   background: radial-gradient(at 24.182683184% 87.8414553882%, hsl(0, 0%, 0%) 0%, hsla(0, 0%, 0%, 0) 100%), radial-gradient(at 53.3173313156% 51.0559812762%, hsl(180, 32%, 70.5882352941%) 0%, hsla(180, 32%, 70.5882352941%, 0) 100%), radial-gradient(at 45.1397097868% 80.2799892173%, hsl(168, 17.8571428571%, 43.9215686275%) 0%, hsla(168, 17.8571428571%, 43.9215686275%, 0) 100%), radial-gradient(at 67.2432457735% 85.6820335559%, hsl(0, 0%, 0%) 0%, hsla(0, 0%, 0%, 0) 100%), radial-gradient(at 29.2082987892% 64.94509437%, hsl(180, 32%, 70.5882352941%) 0%, hsla(180, 32%, 70.5882352941%, 0) 100%), radial-gradient(at 90.8048422853% 45.2270228185%, hsl(168, 17.8571428571%, 43.9215686275%) 0%, hsla(168, 17.8571428571%, 43.9215686275%, 0) 100%), radial-gradient(at 32.8825004487% 88.0638089612%, hsl(0, 0%, 0%) 0%, hsla(0, 0%, 0%, 0) 100%), radial-gradient(at 55.3484213769% 78.878596608%, hsl(180, 32%, 70.5882352941%) 0%, hsla(180, 32%, 70.5882352941%, 0) 100%), radial-gradient(at 24.24620424% 70.9532019119%, hsl(168, 17.8571428571%, 43.9215686275%) 0%, hsla(168, 17.8571428571%, 43.9215686275%, 0) 100%), radial-gradient(at 70.8476429374% 63.1428671226%, hsl(0, 0%, 0%) 0%, hsla(0, 0%, 0%, 0) 100%);
+  background-size: cover;
 }
 body.lock {
   overflow: hidden;
@@ -82,6 +83,10 @@ body.lock {
   max-width: 1200px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+.main {
+  flex-grow: 1;
 }
 
 h1 {
@@ -109,6 +114,10 @@ h1 {
     text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4, 0 0 80px #03bcf4, 0 0 160px #03bcf4;
   }
 }
+h2 {
+  text-align: center;
+}
+
 h3 {
   color: antiquewhite;
   font-size: 2rem;
@@ -342,4 +351,87 @@ h3 {
 
 .presentation:hover .presentation__box:not(:hover) {
   filter: grayscale(1) blur(30px);
+}
+
+.equipment__card-description, .equipment__card-class, .equipment__card-title {
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 20px);
+}
+.equipment__card-description:hover, .equipment__card-class:hover, .equipment__card-title:hover {
+  transform: translate3d(0px, 0px, 50px);
+}
+
+.equipment__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 2rem;
+  row-gap: 80px;
+  padding: 100px 0;
+}
+.equipment__parent {
+  height: 400px;
+  width: 300px;
+  flex-grow: 1;
+  display: flex;
+  place-self: center;
+  perspective: 1000px;
+}
+.equipment__card {
+  border-radius: 10px;
+  padding-top: 100px;
+  transform-style: preserve-3d;
+  background-image: url(./../img/main_img/equipment/background-card.jpg);
+  background-position: center;
+  transition: all 0.5s ease-in-out;
+}
+.equipment__card:hover {
+  background-position: 80% 20%;
+  transform: rotate3d(0.5, 1, 0, 30deg);
+}
+.equipment__card-title {
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+}
+.equipment__card-class {
+  color: rgb(219, 219, 219);
+  font-weight: 400;
+}
+.equipment__card-description {
+  color: rgb(185, 185, 185);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.equipment .card__wash {
+  background-image: url(./../img/main_img/equipment/background-red.jpg);
+}
+.equipment .card__wash:hover {
+  transform: rotate3d(0.5, -1, 0, 30deg);
+}
+.equipment .card__small-par {
+  background-image: url(./../img/main_img/equipment/background-grass.jpg);
+}
+.equipment .card__medium-par {
+  background-image: url(./../img/main_img/equipment/background-heaven.jpg);
+}
+.equipment .card__medium-par:hover {
+  transform: rotate3d(0.5, -1, 0, 30deg);
+}
+.equipment__content {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 0 0 10px 10px;
+  box-shadow: rgba(248, 101, 3, 0.986) 0px 20px 50px -15px;
+  transition: all 0.5s ease-in-out;
+  padding: 10px 5px;
+  transform-style: preserve-3d;
+}
+.equipment .content__wash {
+  box-shadow: rgba(243, 5, 5, 0.9) 0px 20px 50px -15px;
+}
+.equipment .content__small-par {
+  box-shadow: rgba(96, 245, 10, 0.9) 0px 20px 50px -15px;
+}
+.equipment .content__medium-par {
+  box-shadow: rgba(3, 60, 248, 0.9) 0px 20px 50px -15px;
 }/*# sourceMappingURL=style.css.map */
