@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="assets/sass/style.css">
-    <title>Uplights</title>
+    <title>uplight</title>
 </head>
 <body>
     <div class="header">
         <div class="container">
             <nav class="header__navigation">
-                <img src="assets/img/header_img/Logo.png" alt="logo" class="header__logo">
+                <h1 class="header__logo">upLIGHT</h1>
                 <ul class="header__list">
-                    <li>Контакты</li>
-                    <li>О нас</li>
-                    <li>Отзывы</li>
+                    <li><a href="" class="header__link">Контакты</a></li>
+                    <li><a href="" class="header__link">О нас</a></li>
+                    <li><a href="" class="header__link">Отзывы</a></li>
                 </ul>
                 <div class="burger__menu">
                     <span class="burger__item"></span>
@@ -23,28 +24,63 @@
         </div>
     </div>
     <div class="main">
+        <div class="container">
             <section class="autoslider">
-                <img src="assets/img/main_img/autoslider/img4.avif" alt="" class="autoslider__img">
-                <img src="" alt="" class="autoslider__img">
-                <img src="" alt="" class="autoslider__img">
-                <img src="" alt="" class="autoslider__img">
+                        <div class="slider">
+                            <div class="slider__container">
+                                <img src="assets/img/main_img/autoslider/img4.avif" alt="img1" class="slider__img">
+                                <img src="assets/img/main_img/autoslider/img5.avif" alt="img2" class="slider__img">
+                                <img src="assets/img/main_img/autoslider/img6.avif" alt="img3" class="slider__img">
+                                <img src="assets/img/main_img/autoslider/img7.avif" alt="img4" class="slider__img">
+                            </div>
+                            <div class="slider__next controls">NEXT</div>
+                            <div class="slider__prev controls">PREV</div>
+                            <div class="slider__wrapper">
+                                <span class="slider__dot active-dot"></span>
+                                <span class="slider__dot"></span>
+                                <span class="slider__dot"></span>
+                                <span class="slider__dot"></span>
+                            </div>
+                        </div>
             </section>
-            <div class="container">
+            </div>
+        <div class="container">
             <section class="presentation">
-                    <div class="presentation__box presentation__init">описание подсветки декора на ивенте</div>
-                    <div class="presentation__box presentation__slow-dance">описание подсветки медленного танца</div>
-                    <div class="presentation__box presentation__night-dance">описание подсветки дискоеки</div>
+                <div class="presentation__box presentation__init">описание подсветки декора на ивенте</div>
+                <div class="presentation__box presentation__slow-dance">описание подсветки медленного танца</div>
+                <div class="presentation__box presentation__night-dance">описание подсветки дискоеки</div>
             </section>
         </div>
+        <div class="container">
             <section class="description">
-                <div class="container">
-                    <h1 class="description__title">uplighting это</h1>
-                    <p class="description__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium temporibus nostrum delectus inventore doloribus reiciendis, ab est nam similique quae sunt voluptatibus minus mollitia dolores cumque debitis eius tenetur. Eos ipsum tenetur provident, architecto sit assumenda vitae repellendus quibusdam odio cumque quasi? Repellat quaerat incidunt vitae itaque ratione hic libero?</p>
-                </div>
+                <h2 class="description__title">uplighting это</h2>
+                <p class="description__text">Аплайтинг – это свадебный свет для художественной подсветки стен, колонн, потолков иногда даже пола. Выделение светом каких-то архитектурных элементов. Декоративная подсветка столов и президиума молодых. Грамотно продумав и расположив аплайтинг можно очень красиво разукрасить светом даже самое безликое помещение. Для этого используются различные световые приборы и решения.</p>
             </section>
+        </div>
+        <section class="services">
+
+        </section>
+        <section class="equipment">
+            
+        </section>
     </div>
     <footer class="footer">
-
+        <div class="container">
+            <div class="footer__info">
+                <div class="footer__follow">
+                    <h3 class="footer__title">Follow</h3>
+                </div>
+                <div class="footer__middle">
+                    <h3 class="footer__title">ЧТО??</h3>
+                </div>
+                <div class="footer__contacts">
+                    <h3 class="footer__title">Contacts</h3>
+                    <a href="tel:+375291801438">+375291801438</a>
+                    <a href="mailto:ill_Nino@bk.ru">ill_Nino@bk.ru</a>
+                </div>
+            </div>
+            <span class="footer__bottom">МЫ = правильный выбор</span>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>

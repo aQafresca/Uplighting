@@ -1,0 +1,22 @@
+.footer {
+    background-color: #262626;
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+    }
+    // &__follow {
+
+    // }
+    // &__middle {
+
+    // }
+    // &__contacts {
+
+    // }
+    &__bottom {
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,48 @@
+.header__link {
+    color: antiquewhite;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, .1);
+    border-radius: 12px;
+    background-color: #161616;
+    position: relative;
+    z-index: 0;
+    &:active {
+        font-weight: bold;
+        color: #161616;
+        background: transparent;
+    }
+    &::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        // background-color: #333;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+    &::before {
+        content: "";
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #ff00cb, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:  -2px;
+        background-size: 600%;
+        z-index: -1;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        filter: blur(8px);
+        animation: glowing 20s linear infinite;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+        opacity: 1;
+    }
+}
+
+
+@keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+}

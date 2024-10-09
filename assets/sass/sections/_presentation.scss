@@ -5,11 +5,21 @@
     &__box {
         width: 200px;
         height: 300px;
+        z-index: 9;
         margin-top: -60px;
         background-color: #797979;
         border: 1px solid #262626;
         border-radius: 10px;
+        gap: 20px;
         box-shadow: 4px 4px 32px 1px rgba(34, 60, 80, 0.5);
         cursor: pointer;
     }
 }
+
+.presentation:hover .presentation__box:not(:hover) {
+    filter: grayscale(1) blur(30px);
+}
+
+// .presentation:hover .presentation__box {
+//     filter: blur(30px);
+// }
